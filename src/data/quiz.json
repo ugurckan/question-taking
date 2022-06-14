@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "questions": [
+        {
+          "id": 1,
+          "text": "The chlorophyll in photosynthesis is used for",
+          "answers": [
+            "Absorbing light",
+            "Breaking down water molecule",
+            "No function",
+            "Reduction of CO2"
+          ]
+        },
+        {
+          "id": 2,
+          "text": "Proteins after digestion are converted into",
+          "answers": [
+            "Carbohydrates",
+            "Small globules",
+            "Amino acids",
+            "starch"
+          ]
+        },
+        {
+          "id": 3,
+          "text": "Carbohydrates in the plants are stored in the form of",
+          "answers": ["Glycogen", "Starch", "Glucose", "Maltose"]
+        },
+        {
+          "id": 4,
+          "text": "Main site of photosynthesis",
+          "answers": ["Leaf", "Stem", "Chloroplast", "Guard cells"]
+        },
+        {
+          "id": 5,
+          "text": "The small pores present of leaf’s surface are called",
+          "answers": ["Stomata", "Chlorophyll", "Guard cells", "None of these"]
+        },
+        {
+          "id": 6,
+          "text": "Photosynthesis is a",
+          "answers": [
+            "Catabolic process",
+            "Parabolic process",
+            "Amphibolic process",
+            "Photochemical lprocess"
+          ]
+        },
+        {
+          "id": 7,
+          "text": "Opening and closing of pores is a function performed by",
+          "answers": ["Stomata", "Chlorophyll", "Chloroplast", "Guard cells"]
+        },
+        {
+          "id": 8,
+          "text": "Which element is used in the synthesis of proteins?",
+          "answers": ["Hydrogen", "Oxygen", "Nitrogen", "Carbon dioxide"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<button
+  type="button"
+  class="inline-flex justify-center w-full rounded-md bg-fig-600 px-4 py-2 text-sm text-white focus:outline-none focus:right-0"
+  id="menu-button"
+  aria-expanded="true"
+  aria-haspopup="true"
+>
+  <ng-container *ngIf="loading">
+    <div class="mr-3">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+  </ng-container>
+  {{ name }}
+</button>
