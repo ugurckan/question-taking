@@ -1,0 +1,9 @@
+<article class="container mx-auto">
+  <div class="flex flex-col h-full justify-center items-center">
+    <ul class="mb-5">
+      <li class="">Correct Answers: {{ correctCount }}</li>
+      <li>Wrong Answers: {{ wrongCount }}</li>
+    </ul>
+    <app-button [name]="'Reset Quiz'" (click)="onClickReset()"></app-button>
+  </div>
+</article>

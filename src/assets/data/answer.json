@@ -1,0 +1,12 @@
+{
+  "data": [
+    { "questionId": 1, "answerIndex": 0 },
+    { "questionId": 2, "answerIndex": 2 },
+    { "questionId": 3, "answerIndex": 1 },
+    { "questionId": 4, "answerIndex": 2 },
+    { "questionId": 5, "answerIndex": 0 },
+    { "questionId": 6, "answerIndex": 3 },
+    { "questionId": 7, "answerIndex": 3 },
+    { "questionId": 8, "answerIndex": 2 }
+  ]
+}

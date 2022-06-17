@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -6,5 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ButtonComponent {
   @Input() name: string = '';
-  @Input() loading: boolean = false;
+  @Input() loadingName: string = 'Loading';
+  @Input() loading: boolean | null = false;
+  @Input() disabled: boolean | null = false;
 }

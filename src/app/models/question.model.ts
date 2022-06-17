@@ -10,12 +10,26 @@ export interface Answer {
   // correct.
 }
 
-// posted to the /answer endpoint when a user answers a question
-export interface Answering {
-  questionId: number;
-  answerIndex: number; // answerIndex is in [0,1,2,3]
+export interface AnswerResponse {
+  data: Answering[];
 }
 
-export interface Answered extends Answering {
-  correctId: number;
+// posted to the /answer endpoint when a user answers a question
+export class Answering {
+  questionId: number;
+  answerIndex: number | undefined; // answerIndex is in [0,1,2,3]
+
+  constructor(questionId: number, answerIndex?: number) {
+    this.questionId = questionId;
+    this.answerIndex = answerIndex;
+  }
+}
+
+export class Answered extends Answering {
+  correctId: number | undefined;
+
+  constructor(questionId: number, answerIndex?: number, correctId?: number) {
+    super(questionId, answerIndex);
+    this.correctId = correctId;
+  }
 }

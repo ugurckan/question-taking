@@ -21,7 +21,7 @@ code {
 @layer base {
   :root {
     --tw-fig-700: 1 31 75;
-    --tw-fig-600: 0 91 150;
+    --tw-fig-600: 31 96 231;
     --tw-fig-300: 126 130 153;
 
     --tw-wg-400: 27 197 189;
@@ -34,13 +34,15 @@ code {
   body,
   app-root,
   app-quiz,
-  app-question {
+  app-question,
+  app-quiz-completed {
     @apply min-h-screen;
   }
 
   app-root,
   app-quiz,
-  app-question {
+  app-question,
+  app-quiz-completed {
     @apply flex flex-1;
   }
 }

@@ -1,5 +1,40 @@
 <article class="container mx-auto">
   <div class="flex flex-col h-full justify-center items-center">
-    Question {{ questionNumber }}
+    <ng-container *ngIf="loaded$ | async">
+      <app-stepper [question]="question" [questionLength]="questionLength" [answereds]="answereds"></app-stepper>
+
+      <h1 class="mb-5">Question {{ question.id }}</h1>
+
+      <div class="mb-5">
+        <h1 class="py-1.5">{{ question.text }}</h1>
+        <form [formGroup]="form">
+          <ul class="steps">
+            <ng-container *ngFor="let answer of question.answers; let i = index">
+              <li class="step flex items-center py-1">
+                <input class="mt-0.5 mr-2" type="radio" value="{{ i }}" formControlName="answerIndex" />
+                <p>{{ answer }}</p>
+              </li>
+            </ng-container>
+          </ul>
+        </form>
+      </div>
+
+      <div class="flex flex-row space-x-16">
+        <app-button [name]="'Answer'" [loadingName]="'Checking'" (click)="onClickAnswer()" [disabled]="form.invalid"
+          [loading]="loading$ | async"></app-button>
+      </div>
+    </ng-container>
   </div>
 </article>
+
+<app-modal *ngIf="showModal">
+  <ng-container title>
+    <h3 class="text-3xl font-semibold">
+      {{ isCorrect ? "Answer is correct" : "Answer is not correct!" }}
+    </h3>
+  </ng-container>
+  <ng-container buttons>
+    <app-button *ngIf="!isLastQuestion" [name]="'Next'" (click)="onClickNext()"></app-button>
+    <app-button *ngIf="isLastQuestion" [name]="'Finish'" (click)="onClickFinish()"></app-button>
+  </ng-container>
+</app-modal>

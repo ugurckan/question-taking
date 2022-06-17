@@ -1,0 +1,17 @@
+<div class="w-full mx-4 p-4">
+  <div class="flex items-center">
+    <ng-container *ngFor="let step of steps; let i = index">
+      <div class="flex items-center relative"
+        [ngClass]="{'text-white': isCurrentQuestion(i) || isCorrect(i), 'text-blue-500': !isCurrentQuestion(i) && !isCorrect(i)}">
+        <div class="rounded-full cursor-pointer transition duration-500 ease-in-out h-7 w-7 border-2 border-blue-500"
+          [ngClass]="{'bg-blue-500': isCurrentQuestion(i), 'bg-green-500': isCorrect(i)}"
+          (click)="onClickStepper(i + 1)">
+          <span class="flex justify-center">{{ i + 1 }}</span>
+        </div>
+      </div>
+      <ng-container *ngIf="steps.length - 1 !== i">
+        <div class="flex-auto border-t-2 transition duration-500 ease-in-out border-blue-500"></div>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

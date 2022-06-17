@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
 
+// Modules (3rd party)
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
@@ -31,9 +32,16 @@ const routes: Route[] = [
         component: QuizComponent,
       },
       {
-        path: 'exam/:id',
+        path: 'question/:id',
         loadChildren: () =>
           import('../question/question.module').then((m) => m.QuestionModule),
+      },
+      {
+        path: 'completed',
+        loadChildren: () =>
+          import('../quiz-completed/quiz-completed.module').then(
+            (m) => m.QuizCompletedModule
+          ),
       },
     ],
   },

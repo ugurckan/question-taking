@@ -3,14 +3,19 @@ import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
 
+// Environment
+import { environment } from 'src/environments/environment';
+
 // Models
-import { Quiz } from 'src/app/models/quiz.model';
+import { QuizResponse } from 'src/app/models/quiz.model';
 
 @Injectable()
 export class QuizService {
+  private _url = environment.api + 'quiz.json';
+
   constructor(private _http: HttpClient) {}
 
-  get(): Observable<Quiz> {
-    return this._http.get<Quiz>('../../../data/quiz.json');
+  get(): Observable<QuizResponse> {
+    return this._http.get<QuizResponse>(this._url);
   }
 }
